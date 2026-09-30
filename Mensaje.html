@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Información Personal</title>
+  <script>
+    function validarClave() {
+      const claveCorrecta = "1234"; // 🔑 Cambia esta clave
+      const claveIngresada = document.getElementById("clave").value;
+      if (claveIngresada === claveCorrecta) {
+        document.getElementById("contenido").style.display = "block";
+        document.getElementById("login").style.display = "none";
+      } else {
+        alert("Clave incorrecta");
+      }
+    }
+  </script>
+</head>
+<body>
+  <div id="login">
+    <h2>Acceso restringido</h2>
+    <input type="password" id="clave" placeholder="Ingrese clave">
+    <button onclick="validarClave()">Entrar</button>
+  </div>
+
+  <div id="contenido" style="display:none;">
+    <h2>Información Personal</h2>
+    <p><strong>Nombre:</strong> Alexis Cervantes</p>
+    <p><strong>Número de identificación:</strong> 12122121</p>
+    <p><strong>Estado Civil:</strong> Soltero</p>
+    <p><strong>Fecha de nacimiento:</strong> 12/12/1974</p>
+    <p><strong>Nacionalidad:</strong> Brasileño</p>
+    <p><strong>Teléfono:</strong> 8198989898</p>
+    <p><strong>Correo:</strong> alexis@ejemplo.com</p>
+  </div>
+</body>
+</html>
